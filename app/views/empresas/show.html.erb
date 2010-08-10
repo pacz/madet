@@ -1,0 +1,28 @@
+<p>
+  <b>Nit:</b>
+  <%=h @empresa.nit %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%=h @empresa.nombre %>
+</p>
+
+<p>
+  <b>Fch creacion:</b>
+  <%=h @empresa.fch_creacion %>
+</p>
+
+<p>
+  <b>Nro empleados:</b>
+  <%=h @empresa.nro_empleados %>
+</p>
+
+<p>
+  <b>Actividad:</b>
+  <%=h @empresa.actividad %>
+</p>
+
+
+<%= link_to 'Edit', edit_empresa_path(@empresa) %> |
+<%= link_to 'Back', empresas_path %>

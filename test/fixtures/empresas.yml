@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nit: 
+  nombre: MyString
+  fch_creacion: 2010-08-09
+  nro_empleados: 1
+  actividad: MyString
+
+two:
+  nit: 
+  nombre: MyString
+  fch_creacion: 2010-08-09
+  nro_empleados: 1
+  actividad: MyString

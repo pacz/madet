@@ -1,0 +1,26 @@
+<% form_for(@empresa) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nit %><br />
+    <%= f.text_field :nit %>
+  </p>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    Fecha de creación <br />
+    <%= f.date_select :fch_creacion %>
+  </p>
+  <p>
+    Número de empleados <br />
+    <%= f.text_field :nro_empleados %>
+  </p>
+  <p>
+    <%= f.label :actividad %><br />
+    <%= f.text_field :actividad %>
+  </p>
+  <p>
+    <%= f.submit 'Guardar' %>
+  </p>
+<% end %>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100810045520) do
+ActiveRecord::Schema.define(:version => 20100818041341) do
 
   create_table "empresas", :force => true do |t|
     t.string   "nit"
@@ -17,6 +17,15 @@ ActiveRecord::Schema.define(:version => 20100810045520) do
     t.date     "fch_creacion"
     t.integer  "nro_empleados"
     t.string   "actividad"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sucursales", :force => true do |t|
+    t.integer  "empresa_id"
+    t.string   "ciudad"
+    t.string   "direccion"
+    t.string   "administrador"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

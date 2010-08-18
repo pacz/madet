@@ -16,7 +16,7 @@
     <td><%=h sucursal.administrador %></td>
     <td><%= link_to 'Ver', empresa_sucursal_path(@empresa,sucursal) %></td>
     <td><%= link_to 'Modificar', edit_empresa_sucursal_path(@empresa,sucursal) %></td>
-    <td><%= link_to 'Eliminar', empresa_sucursal_path(@empresa,sucursal), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Eliminar', empresa_sucursal_path(@empresa,sucursal), :confirm => 'Esta accion eleimiara el registro, estas seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

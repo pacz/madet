@@ -1,8 +1,8 @@
-<h1>Listing sucursales</h1>
+<h1>Listado de Sucursales de <%=h @empresa.nombre %></h1>
 
 <table>
   <tr>
-    <th>Empresa</th>
+    
     <th>Ciudad</th>
     <th>Direccion</th>
     <th>Administrador</th>
@@ -10,17 +10,18 @@
 
 <% @sucursales.each do |sucursal| %>
   <tr>
-    <td><%=h sucursal.empresa %></td>
+    
     <td><%=h sucursal.ciudad %></td>
     <td><%=h sucursal.direccion %></td>
     <td><%=h sucursal.administrador %></td>
-    <td><%= link_to 'Show', sucursal %></td>
-    <td><%= link_to 'Edit', edit_sucursal_path(sucursal) %></td>
-    <td><%= link_to 'Destroy', sucursal, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Ver', empresa_sucursal_path(@empresa,sucursal) %></td>
+    <td><%= link_to 'Modificar', edit_empresa_sucursal_path(@empresa,sucursal) %></td>
+    <td><%= link_to 'Eliminar', empresa_sucursal_path(@empresa,sucursal), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New sucursal', new_sucursal_path %>
+<%= link_to 'Nueva Sucursal', new_empresa_sucursal_path(@empresa) %>
+<%= link_to 'Atras', empresas_path %>

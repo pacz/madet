@@ -18,7 +18,8 @@
     <td><%=h empresa.actividad %></td>
     <td><%= link_to 'Ver', empresa %></td>
     <td><%= link_to 'Modificar', edit_empresa_path(empresa) %></td>
-    <td><%= link_to 'Eliminar', empresa, :confirm => 'Esta acción eliminará este registro, está seguro?', :method => :delete %></td>
+    <td><%= link_to 'Eliminar', empresa, :confirm => 'Esta accion eliminara este registro, esta seguro?', :method => :delete %></td>
+    <td><%= link_to 'Sucursales', empresa_sucursales_path(empresa) %></td>>
   </tr>
 <% end %>
 </table>

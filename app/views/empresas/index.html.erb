@@ -16,13 +16,13 @@
     <td><%=h empresa.fch_creacion %></td>
     <td><%=h empresa.nro_empleados %></td>
     <td><%=h empresa.actividad %></td>
-    <td><%= link_to 'Show', empresa %></td>
-    <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
-    <td><%= link_to 'Destroy', empresa, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Ver', empresa %></td>
+    <td><%= link_to 'Modificar', edit_empresa_path(empresa) %></td>
+    <td><%= link_to 'Eliminar', empresa, :confirm => 'Esta acción eliminará este registro, está seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New empresa', new_empresa_path %>
+<%= link_to 'Nueva Empresa', new_empresa_path %>

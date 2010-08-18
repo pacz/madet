@@ -1,5 +1,6 @@
 class EmpresasController < ApplicationController
-  
+  before_filter :find_empresa, :only => [:show, :edit, :update, :destroy]
+
   def index
     @empresas = Empresa.all
 
@@ -10,8 +11,7 @@ class EmpresasController < ApplicationController
   end
 
   def show
-    @empresa = Empresa.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @empresa }
@@ -30,7 +30,7 @@ class EmpresasController < ApplicationController
 
   
   def edit
-    @empresa = Empresa.find(params[:id])
+    
   end
 
  
@@ -50,8 +50,7 @@ class EmpresasController < ApplicationController
 
  
   def update
-    @empresa = Empresa.find(params[:id])
-
+    
     respond_to do |format|
       if @empresa.update_attributes(params[:empresa])
         format.html { redirect_to(@empresa, :notice => 'Empresa actualizada satisfactoriamente.') }
@@ -65,12 +64,16 @@ class EmpresasController < ApplicationController
 
  
   def destroy
-    @empresa = Empresa.find(params[:id])
     @empresa.destroy
 
     respond_to do |format|
       format.html { redirect_to(empresas_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+  def find_empresa
+    @empresa = Empresa.find(params[:id])
   end
 end

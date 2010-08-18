@@ -1,7 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :sucursales
-
-  map.resources :empresas
+ map.resources :empresas, :has_many => sucursales
 
   map.resources :empresas
 
